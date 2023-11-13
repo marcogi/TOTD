@@ -1,0 +1,18 @@
+Use the parallel versions on gzip, bzip2, xz:
+
+   pigz, pbzip2, pixz
+%
+Copy your ssh public key(s) to the remote host and forget about passwords:
+
+   ssh-copy-id user@host
+%
+Trace a bash script with -x option:
+
+   bash -x myscript.sh
+
+or
+
+   set -x
+
+into the script.
+%
