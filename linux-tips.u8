@@ -16,3 +16,10 @@ or
 
 into the script.
 %
+Bash shortcut you'll never live without '!$':
+!$ substitutes the last argument of previous command.
+
+   ls -l /path/to/my/wordeful/file
+   cat !$
+   scp !$ user@remotehost:
+%
