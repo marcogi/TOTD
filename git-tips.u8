@@ -1,0 +1,63 @@
+* How can I search Git branches for a file or directory?
+
+  git log --all -- somefile
+
+commit 55d2069a092e07c56a6b4d321509ba7620664c63
+Author: Dustin Sallings <dustin@spy.net>
+Date:   Tue Dec 16 14:16:22 2008 -0800
+
+    added some file
+
+  git branch -a --contains 55d2069
+  otherbranch
+
+Supports globbing, too:
+
+  git log --all -- '**/my_file.png'
+%
+* How can I search Git branches for a file or directory in whole commit history?
+
+  git log --all --full-history -- '**/somefile'
+%
+* How can I show unmerged branches?
+
+  git branch --no-merged
+%
+* How can I show merged branches?
+
+  git branch --merged
+%
+* How can I show tag annotation message?
+
+  git tag -l -n
+%
+* How can I search throught all branches?
+
+  git grep "string/regexp" $(git rev-list --all)
+%
+* How can I change the last commit comment?
+
+  git commit --amend
+%
+* How can I retrieve full clone after partial one (--depth x)
+
+  git pull --unshallow
+%
+* How can I list tags with date, message and author?
+
+  git for-each-ref --format '%(refname) %09 %(taggerdate) %(subject) %(taggeremail)' refs/tags  --sort=taggerdate
+%
+* How can I ignore changes to committed files?
+
+- to leave the file in the repo but ignore future changes to it:
+  git update-index --assume-unchanged <file>
+
+- to undo this:
+  git update-index --no-assume-unchanged <file>
+
+- to find out which files have been set this way:
+  git ls-files -v|grep '^h'
+%
+* How can I see all not pushed commits from all branches?
+
+  git log --branches --not --remotes
