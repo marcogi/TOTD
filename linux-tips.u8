@@ -23,3 +23,9 @@ Bash shortcut you'll never live without '!$':
    cat !$
    scp !$ user@remotehost:
 %
+Poor man world clock:
+
+   TZ=Europe/Rome date
+   TZ=America/Chicago date
+   TZ=Pacific/Honolulu date
+%
