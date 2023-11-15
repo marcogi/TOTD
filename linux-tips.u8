@@ -29,3 +29,8 @@ Poor man world clock:
    TZ=America/Chicago date
    TZ=Pacific/Honolulu date
 %
+With 'more' or 'less' commands you can search forward with '/' and backward with '?' (as in almost all unix-like commands).
+
+Should you happen to have a US keyboard layout, the keys would be '/' and SHIFT+'/'.
+The SHIFT key often has an "up arrown" symbol on it, so backward searching is easy to remember.
+%
