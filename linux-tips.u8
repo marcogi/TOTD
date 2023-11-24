@@ -34,3 +34,7 @@ With 'more' or 'less' commands you can search forward with '/' and backward with
 Should you happen to have a US keyboard layout, the keys would be '/' and SHIFT+'/'.
 The SHIFT key often has an "up arrown" symbol on it, so backward searching is easy to remember.
 %
+You can run an X application on a remote host and open the window on your local display with:
+
+   ssh -X user@host
+%
