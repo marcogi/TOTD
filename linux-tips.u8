@@ -38,3 +38,8 @@ You can run an X application on a remote host and open the window on your local 
 
    ssh -X user@host
 %
+You can directly jump to wanted line number in a text file by typing '+LINENO' just after the 'less', 'more', 'nano', 'vi', etc. commands.
+
+   less +10 myfile.txt
+   vi +54 mynicecode.py
+%
