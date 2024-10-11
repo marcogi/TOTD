@@ -43,3 +43,25 @@ You can directly jump to wanted line number in a text file by typing '+LINENO' j
    less +10 myfile.txt
    vi +54 mynicecode.py
 %
+Allocate a (big) file on the filesystem
+
+    fallocate -l 100MiB /path/to/myfile
+%
+Create a swap file on the filesystem, initialize and activate it.
+
+1. Preallocate a (big) file on the root filesystem:
+    fallocate -l 8GiB /swapfile1
+
+2. "Format" the swap by setting up the Linux swap area into created file:
+    mkswap /swapfile1
+
+3. Enable the newly created swap area:
+    swapon /swapfile1
+
+4. Permanently enable the swap area so that the system enables it on each reboot:
+    sudo echo "/swapfile1      none            swap    sw              0       0" >> /etc/fstab
+%
+Maybe not everybody knows that KB != KiB, MB != MiB, etc.
+
+    man 7 units
+%
